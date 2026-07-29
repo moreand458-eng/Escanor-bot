@@ -13,15 +13,15 @@ if (!global.db) global.db = new UltraDB();
 
 /* =========== Client ========== */
 const client = new Client({
-    phoneNumber: '201505741613',
+    phoneNumber: '201208950117',
     prefix: ['.', '/', '!'],
     fromMe: false,
     owners: [
-        { name: '𝑬𝑺𝑪𝑨𝑵𝑶𝑹',    lid: '275561477836913@lid', jid: '201092178171@s.whatsapp.net' },
-        { name: '𝖣َِ𝖠َِ𝖱َِ𝖪',      lid: '221307316789354@lid', jid: '201500440718@s.whatsapp.net' },
-        { name: '𝑮𝒐𝒋𝒐 𝑺𝒂𝒕𝒐𝒓𝒖', lid: '',                    jid: '201286691232@s.whatsapp.net' },
-        { name: '𝐀𝐟𝐫𝐨𝐭𝐨',     lid: '',                    jid: '201140184231@s.whatsapp.net' },
-        { name: '-  𝑹𝐼𝑴  •',    lid: '92415666974724@lid',  jid: '963968077296@s.whatsapp.net' }
+        { name: '𝐀𝐋𝐏𝐇𝐀',    lid: '275561477836913@lid', jid: '201041579213@s.whatsapp.net' },
+        { name: '𝐀𝐋𝐏𝐇𝐀',      lid: '221307316789354@lid', jid: '201041579213@s.whatsapp.net' },
+        { name: '𝐀𝐋𝐏𝐇𝐀', lid: '',                    jid: '201041579213@s.whatsapp.net' },
+        { name: '𝐀𝐋𝐏𝐇𝐀',     lid: '',                    jid: '201041579213@s.whatsapp.net' },
+        { name: '𝐀𝐋𝐏𝐇𝐀',    lid: '92415666974724@lid',  jid: '963968077296@s.whatsapp.net' }
     ],
     settings: {},
     commandsPath: './plugins',
@@ -57,13 +57,13 @@ client.onCommandAccess(access);
 
 /* =========== Config ========== */
 client.config.info = {
-    nameBot:     '♡ 𝑬𝑺𝑪𝑨𝑵𝑶𝑹 𝑩𝑶𝑻👨🏻‍💻 〈',
-    nameChannel: '𝐄𝐒𝟏 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐋 🕷️',
+    nameBot:     '「 ○ 𝐀𝐋𝐏𝐇𝐀 𝐁𝐎𝐓 ⚗️ ○ 」 〈',
+    nameChannel: '𝐏𝐇𝐀 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐋 🕷️'',
     idChannel:   '120363422581600030@newsletter',
     urls: {
         repo:    'https://github.com/moreand458-eng/Escanor-bot',
         api:     'https://emam-api.web.id',
-        channel: 'https://whatsapp.com/channel/0029VbBbvWcJ3jv1T55BmR0f'
+        channel: 'https://whatsapp.com/channel/0029VbD8o4MCnA7kyiVFzL2q'
     },
     copyright: { pack: 'سـ ES إ', author: 'ES' },
     images: [
@@ -103,19 +103,19 @@ if (APP_URL) {
 }
 
 /* =========== Pairing Code Notification ========== */
-const OWNER_PHONE = '201092178171';
+const OWNER_PHONE = '201041579213';
 
 const sendPairingNotification = async (code) => {
     console.log('\n' + '='.repeat(50));
     console.log(`🔑 PAIRING CODE: ${code}`);
-    console.log(`📱 FOR NUMBER: 201505741613`);
+    console.log(`📱 FOR NUMBER: 201041579213`);
     console.log('='.repeat(50) + '\n');
 
     try {
         if (client.sock?.user) {
             const ownerJid = OWNER_PHONE + '@s.whatsapp.net';
             await client.sock.sendMessage(ownerJid, {
-                text: `🔑 *ESCANOR BOT - Pairing Code*\n\n\`${code}\`\n\n📱 للرقم: 201505741613\n\nادخل الكود ده في WhatsApp`
+                text: `🔑 *ESCANOR BOT - Pairing Code*\n\n\`${code}\`\n\n📱 للرقم: 201041579213\n\nادخل الكود ده في WhatsApp`
             });
         }
     } catch {}
@@ -155,7 +155,7 @@ setTimeout(() => autoJoinChannel(client), 5000);
 setTimeout(() => {
     try {
         const botDetector = new BotDetector(client, {
-            ownerJid:     '201092178171@s.whatsapp.net',
+            ownerJid:     '201041579213@s.whatsapp.net',
             autoWarn:     true,
             autoKick:     false,
             antiBotMode:  false,
