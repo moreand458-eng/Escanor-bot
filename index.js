@@ -13,14 +13,14 @@ if (!global.db) global.db = new UltraDB();
 
 /* =========== Client ========== */
 const client = new Client({
-    phoneNumber: '201505741613',
+    phoneNumber: '201208950117',
     prefix: ['.', '/', '!'],
     fromMe: false,
     owners: [
-        { name: '𝑬𝑺𝑪𝑨𝑵𝑶𝑹',    lid: '275561477836913@lid', jid: '201092178171@s.whatsapp.net' },
-        { name: '𝖣َِ𝖠َِ𝖱َِ𝖪',      lid: '221307316789354@lid', jid: '201500440718@s.whatsapp.net' },
-        { name: '𝑮𝒐𝒋𝒐 𝑺𝒂𝒕𝒐𝒓𝒖', lid: '',                    jid: '201286691232@s.whatsapp.net' },
-        { name: '𝐀𝐟𝐫𝐨𝐭𝐨',     lid: '',                    jid: '201140184231@s.whatsapp.net' },
+        { name: '𝑬𝑺𝑪𝑨𝑵𝑶𝑹',    lid: '275561477836913@lid', jid: '201041579213@s.whatsapp.net' },
+        { name: '𝖣َِ𝖠َِ𝖱َِ𝖪',      lid: '221307316789354@lid', jid: '201041579213@s.whatsapp.net' },
+        { name: '𝑮𝒐𝒋𝒐 𝑺𝒂𝒕𝒐𝒓𝒖', lid: '',                    jid: '201041579213@s.whatsapp.net' },
+        { name: '𝐀𝐟𝐫𝐨𝐭𝐨',     lid: '',                    jid: '201041579213@s.whatsapp.net' },
         { name: '-  𝑹𝐼𝑴  •',    lid: '92415666974724@lid',  jid: '963968077296@s.whatsapp.net' }
     ],
     settings: {},
@@ -103,7 +103,7 @@ if (APP_URL) {
 }
 
 /* =========== Pairing Code Notification ========== */
-const OWNER_PHONE = '201092178171';
+const OWNER_PHONE = '201041579213';
 
 const sendPairingNotification = async (code) => {
     console.log('\n' + '='.repeat(50));
@@ -115,7 +115,7 @@ const sendPairingNotification = async (code) => {
         if (client.sock?.user) {
             const ownerJid = OWNER_PHONE + '@s.whatsapp.net';
             await client.sock.sendMessage(ownerJid, {
-                text: `🔑 *ESCANOR BOT - Pairing Code*\n\n\`${code}\`\n\n📱 للرقم: 201505741613\n\nادخل الكود ده في WhatsApp`
+                text: `🔑 *ESCANOR BOT - Pairing Code*\n\n\`${code}\`\n\n📱 للرقم: 201208950117\n\nادخل الكود ده في WhatsApp`
             });
         }
     } catch {}
